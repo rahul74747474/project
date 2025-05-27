@@ -40,7 +40,7 @@ function App() {
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route
           path="/admin/dashboard"
-          element={admin ? <Dashboard /> : <Navigate to={"/admin/login"} />}
+          element={<Dashboard /> }
         />
         <Route path="/admin/listing/create" element={<CourseCreate />} />
         <Route path="/admin/update-course/:id" element={<UpdateCourse />} />
