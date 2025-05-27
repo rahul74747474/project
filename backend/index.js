@@ -26,7 +26,7 @@ app.use(
 );
 app.use(
   cors({
-    origin: "https://project-psi-blush-39.vercel.app/",
+    origin: "https://project-psi-blush-39.vercel.app",
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
