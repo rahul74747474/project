@@ -26,16 +26,17 @@ function CourseCreate() {
     try {
       // Send JSON payload now, no FormData needed
       const response = await axios.post(
-        `${BACKEND_URL}/admin/listing/create`,
+        "https://project-psi-blush-39.vercel.app/api/v1/admin/listing/create",
         {
-          title,
-          description,
-          price,
-         imageUrl 
-        },
+  "title": "Test Course 2",
+  "description": "2 bed, 2 bath",
+  "price": 1200,
+  "imageUrl": "https://examp1le.com/sample.jpg"
+}
+,
         {
           headers: {
-            Authorization: `Bearer ${token}`,
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzU3Y2FhMGU5ZGE5NWEzYzU0MWE0ZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc0ODQzMDIxNCwiZXhwIjoxNzQ4NTE2NjE0fQ.zAQLhGUEDjyrozY168ec9SvQokKVBnAffncV4ugDR8E",
             "Content-Type": "application/json",
           },
         }
