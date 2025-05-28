@@ -26,10 +26,11 @@ function CourseCreate() {
     }
 
     try {
+       console.log("about to trigger")
       // Send JSON payload now, no FormData needed
  const response = await axios.post(
         `${BACKEND_URL}/admin/listing/create`,
-   console.log("got here1")
+  
         {
           title,
           description,
@@ -43,6 +44,7 @@ function CourseCreate() {
           },
         }
       );
+       console.log("got here1")
 
 
 
