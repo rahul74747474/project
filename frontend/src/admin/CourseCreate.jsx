@@ -18,6 +18,7 @@ function CourseCreate() {
 
     const admin = JSON.parse(localStorage.getItem("admin"));
     const token = admin?.token;
+     console.log("Token from localStorage:", token);
 
     if (!token) {
       navigate("/admin/login");
