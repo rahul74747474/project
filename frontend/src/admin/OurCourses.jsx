@@ -9,8 +9,8 @@ function OurCourses() {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
-  const admin = JSON.parse(localStorage.getItem("admin"));
-  const token = admin.token;
+   const token = localStorage.getItem("adminToken")
+     console.log("Token from localStorage:", token);
 
   if (!token) {
     toast.error("Please login to admin");
