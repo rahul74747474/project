@@ -25,21 +25,22 @@ function CourseCreate() {
 
     try {
       // Send JSON payload now, no FormData needed
-           const response = await axios.post(
-  "https://project-00o1.onrender.com/api/v1/admin/listing/create",
-  {
-    title: "Test Course",
-    description: "Test description",
-    price: 999,
-    imageUrl: "https://example.com/test.jpg"
-  },
-  {
-    headers: {
-      Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzU3Y2FhMGU5ZGE5NWEzYzU0MWE0ZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc0ODQzNzczOSwiZXhwIjoxNzQ4NTI0MTM5fQ.70N3Zja-lDaGHWS_DQZUsIdXfczUs2SqC-Vi4HfHx4A",
-      "Content-Type": "application/json"
-    }
-  }
-);
+ const response = await axios.post(
+        `${BACKEND_URL}/admin/listing/create`,
+        {
+          title,
+          description,
+          price,
+         imageUrl 
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
 
 
       toast.success(response.data.message || "Listing created successfully");
