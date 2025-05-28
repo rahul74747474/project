@@ -14,12 +14,14 @@ function CourseCreate() {
 
   const handleCreateCourse = async (e) => {
     e.preventDefault();
+    console.log("1 step1")
 
     const admin = JSON.parse(localStorage.getItem("admin"));
     const token = admin?.token;
 
     if (!token) {
       navigate("/admin/login");
+      console.log("token wrong")
       return;
     }
 
@@ -27,6 +29,7 @@ function CourseCreate() {
       // Send JSON payload now, no FormData needed
  const response = await axios.post(
         `${BACKEND_URL}/admin/listing/create`,
+   console.log("got here1")
         {
           title,
           description,
