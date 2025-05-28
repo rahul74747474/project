@@ -15,15 +15,18 @@ function OurCourses() {
   if (!token) {
     toast.error("Please login to admin");
     navigate("/admin/login");
+    console.log("wrong token 2")
   }
 
   // fetch courses
   useEffect(() => {
     const fetchCourses = async () => {
+      console.log("fetchvcourse triggered")
       try {
         const response = await axios.get(`${BACKEND_URL}/admin/listing/listings`, {
           withCredentials: true,
         });
+        console.log("reached her")
         console.log(response.data.courses);
         setCourses(response.data.courses);
         setLoading(false);
