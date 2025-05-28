@@ -16,8 +16,8 @@ function CourseCreate() {
     e.preventDefault();
     console.log("1 step1")
 
-    const admin = JSON.parse(localStorage.getItem("adminToken"));
-    const token = admin?.token;
+   
+    const token = localStorage.getItem("adminToken")
      console.log("Token from localStorage:", token);
 
     if (!token) {
