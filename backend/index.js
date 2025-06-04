@@ -37,7 +37,7 @@ const port = process.env.PORT || 3000;
 const DB_URI = process.env.MONGO_URI;
 
 try {
-  await mongoose.connect("mongodb+srv://saxenasaksham111612:ss7_Dhoni@propertymanagement.gkf5tkm.mongodb.net/?retryWrites=true&w=majority&appName=propertyManagement");
+  await mongoose.connect("mongodb+srv://ghibli141:ghibli141@realestate.duill1y.mongodb.net/?retryWrites=true&w=majority&appName=realEstate");
   console.log("Connected to MongoDB");
 } catch (error) {
   console.log(error);
